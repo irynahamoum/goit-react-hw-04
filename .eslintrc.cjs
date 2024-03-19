@@ -1,0 +1,62 @@
+module.exports = {
+  root: true,
+  env: { browser: true, es2020: true },
+  extends: [
+    'prettier',
+    'standard',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
+  ],
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+  settings: { react: { version: '18.2' } },
+  plugins: ['prettier', 'react-refresh'],
+  rules: {
+    'react/prop-types': 0,
+    'react/jsx-no-target-blank': 'off',
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+
+    camelcase: 'off',
+    curly: 'error',
+    'dot-notation': 'error',
+    'generator-star-spacing': ['error', { before: false, after: true }],
+    indent: ['off'],
+    'multiline-ternary': ['off'],
+    'no-async-promise-executor': ['error'],
+    'no-case-declarations': 'error',
+    'no-constant-condition': 'error',
+    'no-empty': 'error',
+    'no-empty-pattern': ['error'],
+    'no-extra-boolean-cast': 'error',
+    'no-prototype-builtins': ['off'],
+    'no-trailing-spaces': 'error',
+    'no-undef': ['error'],
+    'no-unneeded-ternary': 'error',
+    'no-unused-expressions': 'warn',
+    'no-use-before-define': 'error',
+    'no-useless-escape': 'off', // "\#"; good "\x12";
+    'no-var': 'error',
+    'object-curly-spacing': ['error', 'always'],
+    'operator-linebreak': 'error',
+    'prefer-const': 'off',
+    'prefer-regex-literals': 'off',
+    quotes: 'error',
+    semi: ['error', 'always'],
+    'sort-keys': ['off'],
+    'space-before-function-paren': ['off'],
+    'spaced-comment': ['off'],
+    yoda: 'error',
+    'comma-dangle': [
+      'off', // disable in prettier "trailingComma": "none", was "es5"
+      // {
+      //   "arrays": "never",
+      //   "objects": "never",
+      //   "imports": "never",
+      //   "exports": "never",
+      //   "functions": "never"
+      // }
+    ],
+  },
+};
