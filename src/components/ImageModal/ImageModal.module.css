@@ -1,0 +1,31 @@
+.modalOpen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  background-color: rgba(143, 252, 216, 0.497);
+  overflow: hidden;
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.closeBtn {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50px;
+  right: 50px;
+  width: 30px;
+  height: 30px;
+  border: transparent;
+  border-radius: 6px;
+  background-color: rgb(143, 252, 216);
+}

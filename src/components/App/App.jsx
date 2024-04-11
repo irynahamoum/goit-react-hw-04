@@ -68,15 +68,14 @@ function App() {
     <>
       <SearchBar handleQuery={handleSetQuery} />
       {error && <ErrorMessage />}
-      {gallery !== null && gallery.length === 0 && (
-        <p>
-          Sorry, there was nothing found with your request &quot;<code>{query}</code>&quot;
+      {gallery !== null && gallery.length === 0 && showBtn === false && (
+        <p className="message">
+          There was nothing found with your request &quot;<code>{query}</code>&quot;, SORRY 😢
         </p>
       )}
       <Gallery images={gallery} handleModalOpen={handleModalOpen} />
       {loading && <Loader />}
       {showBtn && <LoadMoreBtn onClick={handleLoadMoreBtn} />}
-      {showBtn === false && gallery !== null && <p>There are no more pictures to be shown, SORRY 😢</p>}
       <ImageModal handleModalClose={handleModalClose} modalData={modal.modalData} isOpen={modal.isOpen} />
     </>
   );
